@@ -2,12 +2,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def ts_scatterplot(dat, dim1_, dim2_):
+def ts_scatterplot(dat, dim1_, dim2_, **kwargs):
     """Making a scatterplot of a dataset.
        Args:
            dat: a numpy ndarray of shape (n_ts, n_dim) or (n_ts, length_ts)
            dim1_ and dim2_: int, the dimension id."""
-    plt.plot(dat[:, dim1_], dat[:, dim2_], 'o', color='#365d8d', alpha=0.6)
+    plt.plot(dat[:, dim1_], dat[:, dim2_], 'o', color='#365d8d', alpha=0.6, **kwargs)
     plt.xlabel(f'Dimension {dim1_}')
     plt.ylabel(f'Dimension {dim2_}')
     plt.show()
@@ -27,4 +27,5 @@ def plot_dataset_in_clusters(data, labels, palette='viridis', sharey_=True, **kw
         for j in range(len(group)):
             ax.plot(group[j], color=colors[i], alpha=0.5)
             ax.set_title(f"Cluster {i}")
+
     plt.show()
