@@ -1,5 +1,6 @@
 # CSL_sales_cluster
-WIP: capturing shapelets from a time series dataset, then use them for clustering.
-This repository is still in progress... I'll update more soon.
+Capturing shapelets from a time series dataset, then use them for clustering.
+
+Note: the notebook(s) are run with GPU T4.
 
 The explanatory video is [here](https://youtu.be/tUw8ZYPHBes)
